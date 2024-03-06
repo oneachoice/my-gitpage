@@ -1,0 +1,72 @@
+@import "/src/styles/colors";
+
+.nav {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    display: block;
+    text-decoration: none;
+
+    font-family: "JosefinSans-Bold";
+
+    color: white;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 2vmin;
+
+    transition: 0.2s;
+
+    font-size: 2.5vmin;
+
+    &:hover {
+      color: $grey-400;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.logo {
+  padding: 0.5rem;
+
+  svg {
+    width: 25vmin;
+  }
+
+  &:hover {
+    .motion {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+.oneachoice {
+  circle,
+  path,
+  line,
+  polyline,
+  rect {
+    stroke: white;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  rect {
+    fill: white;
+  }
+
+  .motion {
+    stroke-dashoffset: 101;
+    stroke-dasharray: 101;
+    transition: 0.5s;
+  }
+}

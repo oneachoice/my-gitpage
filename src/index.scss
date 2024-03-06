@@ -1,0 +1,38 @@
+@import "/src/styles/reset";
+@import "/src/styles/colors";
+
+::selection {
+  background-color: $orange;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: $grey-100;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: #212529;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #495057;
+  }
+}
+
+#navigation {
+  position: fixed;
+  mix-blend-mode: exclusion;
+
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  width: 100%;
+}

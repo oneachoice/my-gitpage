@@ -1,0 +1,58 @@
+@import "/src/styles/colors";
+@import "/src/styles/fonts";
+
+.footer {
+  padding: 5vmin;
+
+  h2 {
+    font-family: "Anton-Regular";
+    padding: 8vmin;
+    font-size: 6vmin;
+
+    text-align: center;
+  }
+
+  ul {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  li {
+    justify-self: center;
+  }
+}
+
+.con {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.link {
+  text-decoration: none;
+  color: $blackish;
+
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  $image-size: 4vmin;
+  img {
+    width: $image-size;
+    height: $image-size;
+  }
+
+  p {
+    padding: 1vmin;
+    font-family: "Anton-Regular";
+    font-size: 2vmin;
+  }
+}

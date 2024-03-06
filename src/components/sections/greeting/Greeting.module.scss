@@ -1,0 +1,45 @@
+@import "/src/styles/colors";
+@import "/src/styles/fonts";
+
+.greeting {
+  position: relative;
+
+  background-color: $grey-100;
+
+  width: 100%;
+  height: 100vh;
+}
+
+.title {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: $blackish;
+
+  font-family: "JosefinSans-Bold";
+  font-weight: bold;
+  font-size: 8vw;
+
+  h2 {
+    animation-name: fade-in;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fade-in {
+    0% {
+      color: transparent;
+      transform: translateY(-50%) scale(0.5);
+    }
+
+    100% {
+      color: $blackish;
+      transform: translateY(0) scale(1);
+    }
+  }
+}

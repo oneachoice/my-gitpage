@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.scss";
+
+import Greeting from "./components/sections/greeting/Greeting";
+import History from "./components/sections/history/History";
+import Introduction from "./components/sections/introduction/Introduction";
+import Navigation from "./components/navigation/Navigation";
+import Skills from "./components/sections/skills/Skills";
+import Footer from "./components/sections/footer/Footer";
+
+import { createPortal } from "react-dom";
+import { useMemo } from "react";
 
 function App() {
+  const navigationPortal = useMemo(() => {
+    const navigation = document.getElementById("navigation");
+    if (!navigation) return;
+    return createPortal(<Navigation />, navigation);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {navigationPortal}
+      <main className={styles["page__main"]}>
+        <Greeting />
+        <Introduction />
+        <History />
+        <Skills />
+        <Footer />
+      </main>
+    </>
   );
 }
 

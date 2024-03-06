@@ -1,0 +1,143 @@
+@import "/src/styles/colors";
+@import "/src/styles//fonts";
+
+.gap {
+  width: 100%;
+  height: 40vh;
+
+  background-color: $blackish;
+}
+
+.history {
+  background-color: $blackish;
+  padding-top: 5vh;
+}
+
+.con {
+  max-width: 1024px;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+
+    font-family: "Anton-Regular";
+    font-size: 20vmin;
+
+    color: $grey-100;
+
+    margin-bottom: 15vmin;
+
+    position: relative;
+
+    &::after {
+      display: block;
+
+      position: absolute;
+
+      left: 0;
+      top: 0;
+
+      content: "";
+
+      background-color: $grey-100;
+
+      width: 100%;
+      height: 100%;
+
+      transition: 2s;
+
+      transform-origin: left;
+    }
+
+    &.active::after {
+
+      transform: scaleX(0);
+    }
+  }
+}
+
+.experience {
+  display: flex;
+
+  transform: translateY(50%);
+  opacity: 0.0;
+
+  transition: 2s;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// -------------
+.period {
+  font-family: "Anton-Regular";
+
+  color: $grey-100;
+
+  width: 50%;
+  padding: 5vmin;
+  
+  h2 {
+    font-size: 15vmin;
+    text-wrap: nowrap;
+    
+    span {
+      display: inline-block;
+      height: 100%;
+      width: 10vmin;
+    }
+  }
+}
+
+// -------------
+.career {
+  font-family: "GmarketSansMedium";
+  font-size: 1rem;
+  
+  color: $grey-100;
+  
+  width: 50%;
+
+  padding: 5vmin;
+
+  h3 {
+    font-family: "GmarketSansBold";
+    font-size: 4vmin;
+
+    margin-bottom: 1.5rem;
+
+    text-align: center;
+
+    &::after {
+      display: block;
+
+      content: "";
+
+      width: 100%;
+      height: 2px;
+
+      border-radius: 10px;
+
+      transform: translateY(10px);
+
+      background-color: $grey-100;
+    }
+  }
+
+  p {
+    font-size: 2vmin;
+
+    line-height: 3vmin;
+
+  }
+}

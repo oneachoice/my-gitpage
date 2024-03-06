@@ -1,0 +1,51 @@
+@import "/src/styles/colors";
+
+$bubble-size: 100px;
+
+.coupler {
+  background-color: $blackish;
+
+  height: $bubble-size * 2;
+
+  overflow: hidden;
+}
+
+.bubbles {
+  position: relative;
+  top: 100%;
+
+  width: 100%;
+  height: $bubble-size;
+
+  background-color: $grey-100;
+
+  filter: url("#gooey-filter");
+}
+
+.bubble {
+  position: absolute;
+  top: 0;
+
+  background-color: $grey-100;
+
+  width: $bubble-size;
+  height: $bubble-size;
+
+  border-radius: 50%;
+
+  animation-name: splash;
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+
+  @keyframes splash {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-$bubble-size * 2) scale(0);
+    }
+  }
+}

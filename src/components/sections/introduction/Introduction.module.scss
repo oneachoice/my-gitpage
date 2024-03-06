@@ -1,0 +1,86 @@
+@import "/src/styles/colors";
+@import "/src//styles/fonts";
+
+.coupler {
+  height: 40vh;
+  background-color: $blackish;
+
+  .semicircle {
+    background-color: $grey-100;
+    border-radius: 0 0 50% 50%;
+    width: 100%;
+    height: 60%;
+  }
+}
+
+.introduction {
+  background-color: $blackish;
+
+  padding-top: 5vh;
+
+  width: 100%;
+}
+
+.con {
+  margin: 0 auto;
+  max-width: 1024px;
+
+  color: $grey-100;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    font-family: "GmarketSansMedium";
+    font-size: 2.5vmin;
+
+    line-height: 4vmin;
+
+    text-align: center;
+
+    text-wrap: pretty;
+
+    @media (max-width: 425px) {
+      font-size: 3vmin;
+      line-height: 5vmin;
+    }
+  }
+}
+
+.title {
+  background-color: $grey-100;
+  background-size: 100%;
+
+  width: 40vmin;
+  height: 40vmin;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 5rem;
+
+  transform: scale(0.0);
+  transition: 2s;
+  
+  h2 {
+    font-family: "Anton-Regular";
+    font-size: 10vmin;
+    color: $blackish;
+  }
+}
+
+
+.desc {
+  padding: 30px;
+  
+  transform: scale(0.0);
+  transition: 2s;
+}
+
+.active {
+  transform: scale(1);
+}
